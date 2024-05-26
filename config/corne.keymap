@@ -61,7 +61,7 @@
 &trans  &kp Q                &kp W            &kp E                &kp R              &kp T         &kp Y            &kp U               &kp I                 &kp O             &kp P                         &trans
 &trans  &hmd LEFT_CONTROL A  &hmd LEFT_ALT S  &hmd LEFT_COMMAND D  &smd LEFT_SHIFT F  &kp G         &kp H            &smd RIGHT_SHIFT J  &hmd RIGHT_COMMAND K  &hmd RIGHT_ALT L  &hmd RIGHT_CONTROL SEMICOLON  &trans
 &trans  &kp Z                &kp X            &kp C                &kp V              &kp B         &kp N            &kp M               &kp COMMA             &kp DOT           &kp FSLH                      &trans
-                                              &kp DELETE           &lt 2 TAB          &kp ESCAPE    &lt 4 BACKSPACE  &lt 1 SPACE         &lt 3 ENTER
+                                              &kp DELETE           &lt 2 TAB          &hmd C_AC_NEXT_KEYBOARD_LAYOUT_SELECT ESCAPE    &lt 4 BACKSPACE  &lt 1 SPACE         &lt 3 ENTER
             >;
         };
 
@@ -112,13 +112,13 @@
 
         czech {
 					  // --------------------------------------      --------------------------------------
-            // |      |     |  Ě  |  Č  |  Ř  |  Ť  |      |  Ý  |  Ú  |  Í  |  Ó  |     |      |
+            // |      |  É  |  Ě  |  Č  |  Ř  |  Ť  |      |  Ý  |  Ů	 |  Í  |  Ó  |     |      |
             // |      |  Á  |  Š  |  Ď  | Shft|     |      |  Ú  | Shft|     |     |     |      |
             // |      |  Ž  |     |  Č  |     |     |      |  Ň  |     |     |     |     |      |
             //                    |     |     |     |      |     |     |     |
 
             bindings = <
-&trans  &trans  &cs_ea  &cs_ec  &cs_rc          &cs_tc    &cs_ya  &cs_ur           &cs_ia  &cs_oa  &trans  &trans
+&trans  &cs_ea  &cs_ec  &cs_cc  &cs_rc          &cs_tc    &cs_ya  &cs_ur           &cs_ia  &cs_oa  &trans  &trans
 &trans  &cs_aa  &cs_sc  &cs_dc  &kp LEFT_SHIFT  &trans    &cs_ua  &kp RIGHT_SHIFT  &trans  &trans  &trans  &trans
 &trans  &cs_zc  &trans  &cs_cc  &trans          &trans    &cs_nc  &trans           &trans  &trans  &trans  &trans
                         &trans  &trans          &trans    &trans  &trans           &trans
