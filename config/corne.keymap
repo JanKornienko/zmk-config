@@ -8,8 +8,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include "../zmk-helpers/helper.h"
-#include "../zmk-helpers/international_chars/czech.dtsi"
 
 / {
     combos {
@@ -21,7 +19,7 @@
         };
 
         function_layer {
-            bindings = <&mo 5>;
+            bindings = <&mo 4>;
             key-positions = <38 39>;
         };
     };
@@ -34,6 +32,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
             flavor = "balanced";
         };
 
@@ -44,6 +43,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
+            quick-tap-ms = <300>;
+            flavor = "balanced";
         };
     };
 
@@ -55,18 +56,18 @@
             // |      |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U  |  I  |  O  |  P  |      |
             // |      |  A  |  S  |  D  |  F  |  G  |      |  H  |  J  |  K  |  L  |  ;  |      |
             // |      |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M  |  ,  |  .  |  /  |      |
-            //                    | DEL | TAB | ESC |      | BSP | SPC | ENT |
+            //                    | DEL | TAB | ESC |      | ENT | SPC | BSP |
 
             bindings = <
 &trans  &kp Q                &kp W            &kp E                &kp R              &kp T         &kp Y            &kp U               &kp I                 &kp O             &kp P                         &trans
 &trans  &hmd LEFT_CONTROL A  &hmd LEFT_ALT S  &hmd LEFT_COMMAND D  &smd LEFT_SHIFT F  &kp G         &kp H            &smd RIGHT_SHIFT J  &hmd RIGHT_COMMAND K  &hmd RIGHT_ALT L  &hmd RIGHT_CONTROL SEMICOLON  &trans
 &trans  &kp Z                &kp X            &kp C                &kp V              &kp B         &kp N            &kp M               &kp COMMA             &kp DOT           &kp FSLH                      &trans
-                                              &kp DELETE           &lt 2 TAB          &hmd C_AC_NEXT_KEYBOARD_LAYOUT_SELECT ESCAPE    &lt 4 BACKSPACE  &lt 1 SPACE         &lt 3 ENTER
+                                              &kp DELETE           &lt 2 TAB          &hmd C_AC_NEXT_KEYBOARD_LAYOUT_SELECT ESCAPE    &lt 3 ENTER  &lt 1 SPACE         &kp BACKSPACE
             >;
         };
 
         numbers {
-					  // --------------------------------------      --------------------------------------
+			// --------------------------------------      --------------------------------------
             // |      |     |     |     |     |     |      |     |     |     |     |     |      |
             // |      |  1  |  2  |  3  |  4  |  5  |      |  6  |  7  |  8  |  9  |  0  |      |
             // |      |     |     |     |     |     |      |     |     |     |     |     |      |
@@ -81,7 +82,7 @@
         };
 
         symbols {
-					  // --------------------------------------      --------------------------------------
+			// --------------------------------------      --------------------------------------
             // |      |     |     |     |     |     |      |  `  |  *  |  -  |  =  |     |      |
             // |      |  !  |  @  |  #  |  $  |  %  |      |  ^  |  &  |  (  |  )  |  '  |      |
             // |      |     |     |     |     |     |      |     |  [  |  ]  |  \  |     |      |
@@ -96,7 +97,7 @@
         };
 
         media {
-						// --------------------------------------      --------------------------------------
+			// --------------------------------------      --------------------------------------
             // |      |     |     |     |     |     |      | Prev | VolDn | VolUp | Next | Mute |
             // |      | Ctrl| Alt | Cmd | Shft|     |      | Left | Down  |  Up   | Right| Play |
             // |      |     |     |     |     |     |      | Home | PgDn  | PgUp  | End  | F12  |
@@ -110,23 +111,8 @@
             >;
         };
 
-        czech {
-					  // --------------------------------------      --------------------------------------
-            // |      |     |  É  |  Ě  |  Ř  |  Ť  |      |  Ý  |  Ů	 |  Í  |  Ó  |     |      |
-            // |      |  Á  |  Š  |  Ď  | Shft|     |      |  Ú  | Shft|     |     |     |      |
-            // |      |  Ž  |     |  Č  |     |     |      |  Ň  |     |     |     |     |      |
-            //                    |     |     |     |      |     |     |     |
-
-            bindings = <
-&trans  &trans  &cs_ea  &cs_ec  &cs_rc          &cs_tc    &cs_ya  &cs_ur           &cs_ia  &cs_oa  &trans  &trans
-&trans  &cs_aa  &cs_sc  &cs_dc  &kp LEFT_SHIFT  &trans    &cs_ua  &kp RIGHT_SHIFT  &trans  &trans  &trans  &trans
-&trans  &cs_zc  &trans  &cs_cc  &trans          &trans    &cs_nc  &trans           &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans    &trans  &trans           &trans
-            >;
-        };
-
         function {
-						// --------------------------------------      ---------------------------------------
+			// --------------------------------------      ---------------------------------------
             // |      | F11 | F12 |     |     |     |      | BTCLR|     |     |     |     |      |
             // |      | F1  | F2  | F3  | F4  | F5  |      | BT0  | BT1 | BT2 | BT3 | BT4 |      |
             // |      | F6  | F7  | F8  | F9  | F10 |      |      |     |     |     |     |      |
