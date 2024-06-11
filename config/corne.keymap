@@ -13,9 +13,9 @@
     combos {
         compatible = "zmk,combos";
 
-        caps_word {
-            bindings = <&caps_word>;
-            key-positions = <17 18>;
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <16 19>;
         };
 
         function_layer {
@@ -27,24 +27,25 @@
     behaviors {
         hmd: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "Homerow Mods";
+            label = "HOMEROW_MODS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
+            flavor = "tap-preffered";
             tapping-term-ms = <200>;
-            quick-tap-ms = <300>;
-            flavor = "balanced";
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <200>;
         };
 
-        smd: shift_mod {
+        smd: shift_hrm {
             compatible = "zmk,behavior-hold-tap";
-            label = "Shift Mod";
+            label = "SHIFT_HRM";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
+            flavor = "tap-preffered";
             tapping-term-ms = <180>;
-            quick-tap-ms = <300>;
-            flavor = "balanced";
+            quick-tap-ms = <180>;
         };
     };
 
@@ -62,7 +63,7 @@
 &trans  &kp Q                &kp W            &kp E                &kp R              &kp T         &kp Y            &kp U               &kp I                 &kp O             &kp P                         &trans
 &trans  &hmd LEFT_CONTROL A  &hmd LEFT_ALT S  &hmd LEFT_COMMAND D  &smd LEFT_SHIFT F  &kp G         &kp H            &smd RIGHT_SHIFT J  &hmd RIGHT_COMMAND K  &hmd RIGHT_ALT L  &hmd RIGHT_CONTROL SEMICOLON  &trans
 &trans  &kp Z                &kp X            &kp C                &kp V              &kp B         &kp N            &kp M               &kp COMMA             &kp DOT           &kp FSLH                      &trans
-                                              &kp DELETE           &lt 2 TAB          &hmd C_AC_NEXT_KEYBOARD_LAYOUT_SELECT ESCAPE    &lt 3 ENTER  &lt 1 SPACE         &kp BACKSPACE
+                                              &kp DELETE           &lt 2 TAB          &hmd C_AC_NEXT_KEYBOARD_LAYOUT_SELECT ESCAPE    &kp ENTER  &lt 1 SPACE         &lt 3 BACKSPACE
             >;
         };
 
