@@ -15,7 +15,7 @@
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <17 18>;
+            key-positions = <16 19>;
         };
 
         function_layer {
@@ -33,7 +33,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
         };
 
         smd: shift_mod {
@@ -44,7 +44,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             quick-tap-ms = <180>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
         };
     };
 
