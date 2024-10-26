@@ -32,47 +32,78 @@ ZMK_HOLD_TAP(smd,
     flavor = "balanced";
 )
 
+ZMK_HOLD_TAP(hmd_cs_aa,
+    bindings = <&kp LEFT_CONTROL>, <&cs_aa>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+    flavor = "balanced";
+)
+
+ZMK_HOLD_TAP(hmd_cs_sc,
+    bindings = <&kp LEFT_ALT>, <&cs_sc>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+    flavor = "balanced";
+)
+
+ZMK_HOLD_TAP(hmd_cs_dc,
+    bindings = <&kp LEFT_COMMAND>, <&cs_dc>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+    flavor = "balanced";
+)
+
+ZMK_HOLD_TAP(smd_cs_ua,
+    bindings = <&kp RIGHT_SHIFT>, <&cs_ua>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <180>;
+    flavor = "balanced";
+)
+
 /* Keymap */
 
-ZMK_LAYER(def_layer,
+ZMK_LAYER(DEF,
     ___  &kp Q                &kp W            &kp E                &kp R              &kp T         &kp Y            &kp U               &kp I                 &kp O             &kp P ___
     ___  &hmd LEFT_CONTROL A  &hmd LEFT_ALT S  &hmd LEFT_COMMAND D  &smd LEFT_SHIFT F  &kp G         &kp H            &smd RIGHT_SHIFT J  &hmd RIGHT_COMMAND K  &hmd RIGHT_ALT L  &hmd RIGHT_CONTROL SEMICOLON  ___
     ___  &kp Z                &kp X            &kp C                &kp V              &kp B         &kp N            &kp M               &kp COMMA             &kp DOT           &kp FSLH  ___
                                               &kp DELETE           &lt SYM TAB          &hmd C_AC_NEXT_KEYBOARD_LAYOUT_SELECT ESCAPE    &lt MED ENTER  &lt NUM SPACE  &lt CZE BACKSPACE
 )
 
-ZMK_LAYER(num_layer,
+ZMK_LAYER(NUM,
     ___  ___                         ___                     ___                         ___                       ___             ___           ___                        ___                          ___                      ___  ___
     ___  &hmd LEFT_CONTROL KP_NUMBER_1  &hmd LEFT_ALT KP_NUMBER_2  &hmd LEFT_COMMAND KP_NUMBER_3  &smd LEFT_SHIFT KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &smd RIGHT_SHIFT KP_NUMBER_7  &hmd RIGHT_COMMAND KP_NUMBER_8  &hmd RIGHT_ALT KP_NUMBER_9  &hmd RIGHT_CONTROL KP_NUMBER_0  ___
     ___  ___                         ___                     ___                         ___                       ___             ___           ___                        ___                          ___                      ___  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
 
-ZMK_LAYER(sym_layer,
+ZMK_LAYER(SYM,
     ___  ___                         ___            ___                  ___                  ___         ___     &kp GRAVE                   &kp ASTERISK                         &kp MINUS                         &kp EQUAL  ___
     ___  &hmd LEFT_CONTROL EXCLAMATION  &hmd LEFT_ALT AT  &hmd LEFT_COMMAND HASH  &smd LEFT_SHIFT DOLLAR  &kp PERCENT    &kp CARET  &smd RIGHT_SHIFT AMPERSAND  &hmd RIGHT_COMMAND LEFT_PARENTHESIS  &hmd RIGHT_ALT RIGHT_PARENTHESIS  &hmd RIGHT_CONTROL APOSTROPHE  ___
     ___  ___                         ___            ___                  ___                  ___         ___     ___                      &kp LEFT_BRACKET                     &kp RIGHT_BRACKET                 &kp BACKSLASH  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
 
-ZMK_LAYER(med_layer,
+ZMK_LAYER(MED,
 ___  ___            ___        ___            ___          ___    &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &kp C_MUTE  ___
 ___  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  ___    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp C_PLAY_PAUSE  ___
 ___  ___            ___        ___            ___          ___    &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END          &kp F12  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
 
-ZMK_LAYER(fun_layer,
+ZMK_LAYER(FUN,
 ___  &kp F11  &kp F12  ___  ___  ___     &bt BT_CLR    ___        ___        ___       ___  ___
 ___  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  ___
 ___  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    ___        ___        ___        ___       ___  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
 
-ZMK_LAYER(cze_layer,
+ZMK_LAYER(CZE,
 ___  ___  &cs_ea  &cs_ec  &cs_rc  &cs_tc  &cs_ya  &cs_ur  &cs_ia  &cs_oa  ___  ___
 
-___  &hmd LEFT_CONTROL &cs_aa  &hmd LEFT_ALT &cs_sc  &hmd LEFT_COMMAND &cs_dc  &kp LEFT_SHIFT  ___         ___            &smd RIGHT_SHIFT &cs_ua  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  ___
+___  &hmd_cs_aa  &hmd_cs_sc  &hmd_cs_dc  &kp LEFT_SHIFT  ___         ___            &smd_cs_ua  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  ___
 ___  &cs_zc  ___  &cs_cc  ___  ___  &cs_nc  ___  ___  ___  ___  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
