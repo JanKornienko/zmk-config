@@ -55,7 +55,7 @@
         compatible = "zmk,keymap";
 
         default {
-            display-name = "DEFAULT"
+            display-name = "DEFAULT";
             bindings = <
                 // --------------------------------------      --------------------------------------
                 // |      |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U  |  I  |  O  |  P  |      |
@@ -70,7 +70,7 @@
         };
 
         numbers {
-            display-name = "NUMBERS"
+            display-name = "NUMBERS";
             bindings = <
                 // --------------------------------------      --------------------------------------
                 // |      |  1  |  2  |  3  |  4  |  5  |      |  6  |  7  |  8  |  9  |  0  |      |
@@ -85,7 +85,7 @@
         };
 
         symbols {
-            display-name = "SYMBOLS"
+            display-name = "SYMBOLS";
             bindings = <
                 // --------------------------------------      --------------------------------------
                 // |      |  ~  |  *  |  -  |  =  |     |      |  %  |  ^  |  &  |  (  |  )  |      |
@@ -100,7 +100,7 @@
         };
 
         media {
-            display-name = "MEDIA"
+            display-name = "MEDIA";
             bindings = <
                 // --------------------------------------      --------------------------------------
                 // |      |     |     |     |     |     |      | PREV | VOL- | VOL+ | NEXT | MUTE |      |
@@ -115,7 +115,7 @@
         };
 
         function {
-            display-name = "FUNCTION"
+            display-name = "FUNCTION";
             bindings = <
                 // --------------------------------------      --------------------------------------
                 // |      | F11 | F12 |     |     |     |      | CLR |     |     |     |     |      |
