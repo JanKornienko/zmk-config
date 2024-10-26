@@ -33,7 +33,7 @@ ZMK_HOLD_TAP(smd,
 )
 
 ZMK_HOLD_TAP(hmd_cs_aa,
-    bindings = <&kp LEFT_CONTROL>, <&cs_aa>;
+    bindings = <&kp LEFT_CONTROL>, <>;
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
     require-prior-idle-ms = <125>;
@@ -41,7 +41,7 @@ ZMK_HOLD_TAP(hmd_cs_aa,
 )
 
 ZMK_HOLD_TAP(hmd_cs_sc,
-    bindings = <&kp LEFT_ALT>, <&cs_sc>;
+    bindings = <&kp LEFT_ALT>, <>;
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
     require-prior-idle-ms = <125>;
@@ -49,7 +49,7 @@ ZMK_HOLD_TAP(hmd_cs_sc,
 )
 
 ZMK_HOLD_TAP(hmd_cs_dc,
-    bindings = <&kp LEFT_COMMAND>, <&cs_dc>;
+    bindings = <&kp LEFT_COMMAND>, <>;
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
     require-prior-idle-ms = <125>;
@@ -57,7 +57,7 @@ ZMK_HOLD_TAP(hmd_cs_dc,
 )
 
 ZMK_HOLD_TAP(smd_cs_ua,
-    bindings = <&kp RIGHT_SHIFT>, <&cs_ua>;
+    bindings = <&kp RIGHT_SHIFT>, <>;
     tapping-term-ms = <180>;
     quick-tap-ms = <180>;
     flavor = "balanced";
@@ -103,7 +103,7 @@ ___  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    ___        ___        ___     
 ZMK_LAYER(CZE,
 ___  ___  &cs_ea  &cs_ec  &cs_rc  &cs_tc  &cs_ya  &cs_ur  &cs_ia  &cs_oa  ___  ___
 
-___  &hmd_cs_aa  &hmd_cs_sc  &hmd_cs_dc  &kp LEFT_SHIFT  ___         ___            &smd_cs_ua  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  ___
+___  &hmd_cs_aa &cs_aa  &hmd_cs_sc &cs_sc  &hmd_cs_dc &cs_dc &kp LEFT_SHIFT  ___         ___            &smd_cs_ua &cs_ua &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  ___
 ___  &cs_zc  ___  &cs_cc  ___  ___  &cs_nc  ___  ___  ___  ___  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
