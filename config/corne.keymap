@@ -71,7 +71,8 @@ ___  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    ___        ___        ___     
 
 ZMK_LAYER(cze_layer,
 ___  ___  &cs_ea  &cs_ec  &cs_rc  &cs_tc  &cs_ya  &cs_ur  &cs_ia  &cs_oa  ___  ___
-___  &cs_aa  &cs_sc  &cs_dc  ___  ___  ___  &cs_ua  ___  ___  ___  ___
+
+___  &hmd LEFT_CONTROL &cs_aa  &hmd LEFT_ALT &cs_sc  &hmd LEFT_COMMAND &cs_dc  &kp LEFT_SHIFT  ___         ___            &smd RIGHT_SHIFT &cs_ua  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  ___
 ___  &cs_zc  ___  &cs_cc  ___  ___  &cs_nc  ___  ___  ___  ___  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
