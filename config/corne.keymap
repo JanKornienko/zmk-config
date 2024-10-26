@@ -29,7 +29,7 @@ ZMK_HOLD_TAP(hmd,
 
     #biding-cells = <2>;
     tapping-term-ms = <200>;
-    quick-tap-ms = <200>
+    quick-tap-ms = <200>;
     require-prior-idle-ms = <125>;
     flavor = "balanced";
 )
@@ -40,7 +40,7 @@ ZMK_HOLD_TAP(smd,
 
     #biding-cells = <2>;
     tapping-term-ms = <180>;
-    quick-tap-ms = <180>
+    quick-tap-ms = <180>;
     flavor = "balanced";
 )
 
