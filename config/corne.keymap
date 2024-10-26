@@ -80,6 +80,6 @@ ZMK_LAYER(fun_layer,
 ZMK_LAYER(cze_layer,
 ___  &cs_ea  &cs_ec  &cs_rc  &cs_tc  &cs_ya  &cs_ur  &cs_ia  &cs_oa  ___
 &cs_aa  &cs_sc  &cs_dc  ___  ___  ___  &cs_ua  ___  ___  ___
-&cs__zc  ___  &cs_cc  ___  ___  &cs_nc  ___  ___  ___  ___
+&cs_zc  ___  &cs_cc  ___  ___  &cs_nc  ___  ___  ___  ___
                                                                   ___                         ___                       ___             ___           ___                        ___
 )
